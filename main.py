@@ -11,13 +11,12 @@ from dotenv import load_dotenv
 load_dotenv()
 
 # Retrieve MongoDB credentials from environment variables
-username = os.getenv("MONGO_USERNAME")
-password = os.getenv("MONGO_PASSWORD")
-encoded_username = quote_plus(username)
-encoded_password = quote_plus(password)
+# username = os.getenv("MONGO_USERNAME")
+# password = os.getenv("MONGO_PASSWORD")
+# encoded_username = quote_plus(username)
+# encoded_password = quote_plus(password)
 
-# MongoDB connection
-client = MongoClient(f"mongodb+srv://{encoded_username}:{encoded_password}@cluster0.yeodlfo.mongodb.net/?retryWrites=true&w=majority&tls=true")
+client = MongoClient(f"mongodb+srv://dnvishnu:Fu99NSbZqN8wN4ks@cluster0.yeodlfo.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0")
 
 db = client["roadmap_builder"]
 roadmaps_collection = db["roadmaps"]
